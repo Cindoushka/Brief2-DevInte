@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription</title>
+</head>
+<body>
+
+    <h1>Formulaire d'inscription à remplir</h1>
+
+    <p>Les champs suivis d'une * sont obligatoires</p>
+
+        <!-- Video youtube de conseils pour un entretien en tant que développeur -->
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/S06zMXpys6I" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <!-- Petit texte d'Accueil -->
+
+   <p>Vous postulez actuellement à un poste de développeur web. <br> 
+    Dans ce cadre, nous vous invitons à remplir ce formulaire de la façon la plus complète possible. <br>
+    Nous vous recontacterons pour un éventuel entretien selon les modalités qui vous conviendront.<br>
+    N'hésitez pas à suivre les conseils de cette vidéo youtube pour bien vous préparer! 
+   </p>
+
+    <form>
+
+        <!-- Encart pour les infos d'identité -->
+
+        <fieldset>
+            <legend>  ❖ Identité  ❖</legend>
+        <p>
+            <label for="name">Prénom *</label> <br>
+            <input type="text" name="prenom" id="name" placeholder="Tony" required>
+        </p>
+
+        <p>
+            <label for="surname">Nom *</label> <br>
+            <input type="text" name="nom" id="surname" placeholder="Stark" required>
+        </p>
+
+        <p>
+            <label for="age">Âge *</label>
+            <input type="number" name="age" id="age" min="16" max="99" required>
+        </p>
+
+        <p>
+            Sexe * <br>
+
+            <input type="radio" id="male" name="gender" value="Male" required>
+            <label for="male">Homme</label><br>
+
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Femme</label><br>
+
+            <input type="radio" id="nspp" name="gender" value="Nspp">
+            <label for="nspp">Ne se prononce pas</label><br>
+        </p>
+
+        </fieldset>
+
+
+        <br>
+
+        <!-- Encart pour les coordonnées -->
+
+            <fieldset>
+                <legend> ❖ Coordonnées ❖ </legend>
+
+        <p>
+            <label for="email">Adresse Email *</label> <br>
+            <input type="email" name="email" id="email" placeholder="tony.stark@starkcorporation.com" size="30" required>
+        </p>
+
+        <p>
+            <label for="adress">Adresse postale</label> <br>
+            <input type="text" name="adress" id="adress" placeholder="Manoir Stark, Main Street" size="30">
+        </p>
+
+     
+        <p>
+            <label for="cpostal">Code Postal</label> <br>
+            <input type="text" name="codepostal" id="cpostal" pattern="[0-9]{5}" placeholder="59000" size="5">
+        </p>
+
+        <p>
+            <label for="city">Ville</label> <br>
+            <input type="text" name="city" id="city" placeholder="Lille">
+        </p>
+
+        <p>
+            <label for="phone">Numéro de téléphone</label> <br>
+            <input type="tel" name="phone" id="phone" pattern="(01|02|03|04|05|06|07|08|09)[ \.\-]?[0-9]{2}[ \.\-]?[0-9]{2}[ \.\-]?[0-9]{2}[ \.\-]?[0-9]{2}" placeholder="0786305899">
+        </p>
+
+        </fieldset>
+
+
+        
+        <br>
+
+        <!-- Encart pour les informations complémentaires (métier et pièces d'identités) -->
+
+        <fieldset>
+            <legend>  ❖ Informations supplémentaires  ❖ </legend>
+
+        <p>
+            <label for="work"> Métier exercé</label>
+            <select name="work" id="work">
+               <option value="">--Sélectionner une profession--</option>
+               <option value="dev">Développeur</option>
+               <option value="sales">Commercial</option>
+               <option value="learn">Enseignant</option>
+               <option value="art">Artiste</option>
+   
+            </select>
+        </p>
+
+        <p>
+            <label for="birth">Date de naissance</label>
+            <input type="date" name="date" id="birth">
+        </p>
+
+        <p>
+            <label for="country">Pays de naissance</label>
+            <select name="country" id="country">
+                <option value="">--Sélectionner un pays--</option>
+               <option value="germany">Allemagne</option>
+               <option value="belgium">Belgique</option>
+               <option value="france">France</option>
+               <option value="spain">Espagne</option>
+               <option value="italy">Italie</option>
+   
+            </select>
+        </p>
+
+        <p>
+            <label for="nationality"> Nationalité</label>
+            <select name="nationality" id="nationality">
+               <option value="german">Allemande</option>
+               <option value="belge">Belge</option>
+               <option value="french" selected>Française</option>
+               <option value="spanish">Espagnole</option>
+               <option value="italian">Italienne</option>
+   
+            </select>
+        </p>
+
+        <p>
+            <label for="numss">Numéro de sécurité sociale</label> <br>
+            <input type="text" name="securitesociale" id="numss" pattern="[12][ \.\-]?[0-9]{2}[ \.\-]?(0[1-9]|[1][0-2])[ \.\-]?([0-9]{2}|2A|2B)[ \.\-]?[0-9]{3}[ \.\-]?[0-9]{3}[ \.\-]?[0-9]{2}" placeholder="1 92 08 62 107 607 69" maxLength="21">
+        </p>
+
+        <p>
+            <label for="cartevitale"> Copie de la carte vitale</label>
+            <input type="file" name="cartevitale" id="cartevitale">
+        </p>
+
+        <p>
+            <label for="numpass">Numéro de passeport</label> <br>
+            <input type="text" name="numpass" id="numpass" pattern="[0-9]{2}[A-Z]{2}[0-9]{5}" placeholder="16BM00369">
+        </p>
+
+        <p>
+            <label for="datepasseport">Date de délivrance du passeport</label>
+            <input type="date" name="datepasseport" id="datepasseport" min="2012-11-10">
+        </p>
+
+        <p>
+            <label for="datefinpasseport">Date de validité du passeport</label>
+            <input type="date" name="datefinpasseport" id="datefinpasseport" max="2032-11-10">
+        </p>
+
+        <p>
+            <label for="passeport"> Copie du passeport</label>
+            <input type="file" name="passeport" id="passeport">
+        </p>
+
+        </fieldset>
+
+         <!-- Demande moyen de contact  -->
+
+        <p> Comment souhaitez-vous être recontacté(e)?</p>
+
+
+            <input type="checkbox" id="call" name="call" value="Call">
+            <label for="call">Par téléphone</label><br>
+
+            <input type="checkbox" id="mail" name="mail" value="Mail">
+            <label for="mail">Par email</label><br>
+
+            <input type="checkbox" id="letter" name="letter" value="letter">
+            <label for="letter">Par courrier</label><br>
+
+
+            <p> Quand souhaitez-vous être recontacté(e)? </p>
+
+        <!-- Tableau de checkbox pour les disponibilités à mettre en forme avec CSS -->
+
+            <table>
+                <tr>
+                    <td></td>
+                    <th>Lundi</th>
+                    <th>Mardi</th>
+                    <th>Mercredi</th>
+                    <th>Jeudi</th>
+                    <th>Vendredi</th>
+                    <th>Samedi</th>
+                </tr>
+
+                <tr>
+                    <th>8h-11h</th>
+                    <td> <input type="checkbox" name="matin" value="lundi"></td>
+                    <td> <input type="checkbox" name="matin" value="mardi"></td>
+                    <td> <input type="checkbox" name="matin" value="mercredi"></td>
+                    <td> <input type="checkbox" name="matin" value="jeudi"></td>
+                    <td> <input type="checkbox" name="matin" value="vendredi"></td>
+                    <td> <input type="checkbox" name="matin" value="samedi"></td>
+                </tr>
+
+                <tr>
+                    <th>11h-14h</th>
+                    <td> <input type="checkbox" name="midi" value="lundi"></td>
+                    <td> <input type="checkbox" name="midi" value="mardi"></td>
+                    <td> <input type="checkbox" name="midi" value="mercredi"></td>
+                    <td> <input type="checkbox" name="midi" value="jeudi"></td>
+                    <td> <input type="checkbox" name="midi" value="vendredi"></td>
+                    <td> <input type="checkbox" name="midi" value="samedi"></td>
+                </tr>
+
+                <tr>
+                    <th>14h-17h</th>
+                    <td> <input type="checkbox" name="aprem" value="lundi"></td>
+                    <td> <input type="checkbox" name="aprem" value="mardi"></td>
+                    <td> <input type="checkbox" name="aprem" value="mercredi"></td>
+                    <td> <input type="checkbox" name="aprem" value="jeudi"></td>
+                    <td> <input type="checkbox" name="aprem" value="vendredi"></td>
+                    <td rowspan="2"></td>
+                </tr>
+
+                <tr>
+                    <th>17h-20h</th>
+                    <td> <input type="checkbox" name="soir" value="lundi"></td>
+                    <td> <input type="checkbox" name="soir" value="mardi"></td>
+                    <td> <input type="checkbox" name="soir" value="mercredi"></td>
+                    <td> <input type="checkbox" name="soir" value="jeudi"></td>
+                    <td> <input type="checkbox" name="soir" value="vendredi"></td>
+                </tr>
+
+            </table>
+
+            <br>
+
+        <!-- Demande des disponibilités pour le poste -->
+
+            <p>À partir de quand êtes vous disponible?</p>
+    
+                <input type="radio" id="now" name="when" value="Now" required>
+                <label for="now">Tout de suite</label><br>
+    
+                <input type="radio" id="weeks" name="when" value="Weeks">
+                <label for="weeks">Dans une/deux semaine(s)</label><br>
+    
+                <input type="radio" id="month" name="when" value="Month">
+                <label for="month">Dans un mois</label><br>
+        <p>
+            <input type="submit">
+        </p>
+        <img src="formulaire.jpg" alt="photodeformulaire">
+
+    </form>
+    
+</body>
+</html>
